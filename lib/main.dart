@@ -13,6 +13,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.amber,
+        appBar: AppBar(
+          title: Text("My AppBar"),
+        ),
         body: Center(
           child: Container(
             height: 200,
@@ -21,13 +24,12 @@ class MyApp extends StatelessWidget {
                 color: Colors.blue, borderRadius: BorderRadius.circular(20)),
 
             padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+
             // padding: EdgeInsets.only(top: 10, left: 20),
-            child: Text(
-              'Hello my guy',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+            child: Icon(
+              Icons.favorite,
+              color: Colors.white,
+              size: 32,
             ),
           ),
         ),
