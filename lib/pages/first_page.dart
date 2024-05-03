@@ -14,12 +14,15 @@ class FirstPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('Go to second page'),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SecondPage()));
-          },
-        ),
+            child: Text('Go to second page'),
+            onPressed: () {
+              //Navigator.push(
+              //     context,
+              //    MaterialPageRoute(
+              //      builder: (context) => SecondPage()
+              //      ),
+              Navigator.pushNamed(context, '/secondpage');
+            }),
       ),
     );
   }
