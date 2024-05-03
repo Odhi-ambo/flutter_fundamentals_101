@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: ListView(
+        /*body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
@@ -26,6 +26,27 @@ class MyApp extends StatelessWidget {
             Container(
               width: 350,
               color: Colors.blueGrey,
+            )
+          ],
+        ),*/
+
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.brown,
+            ),
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.black26,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.amberAccent,
             )
           ],
         ),
