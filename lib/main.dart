@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_beginners/pages/first_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -6,16 +7,18 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  void tapped() {
-    print('Tapped');
-  }
+  // void tapped() {
+  // print('Tapped');
+  //}
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        /*body: ListView(
+      home: FirstPage(),
+
+      // home: Scaffold(
+      /*body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
           ],
         ),*/
 
-        /*body: Stack(
+      /*body: Stack(
           alignment: Alignment.center,
           children: [
             Container(
@@ -54,7 +57,7 @@ class MyApp extends StatelessWidget {
           ],
         ),*/
 
-        body: GestureDetector(
+      /*  body: GestureDetector(
           /*one way
           onTap: () {
             print('Tapped');
@@ -73,7 +76,8 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-      ),
+
+      ),*/
     );
   }
 }
