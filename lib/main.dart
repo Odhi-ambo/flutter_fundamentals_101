@@ -6,6 +6,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  void tapped() {
+    print('Tapped');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
           ],
         ),*/
 
-        body: Stack(
+        /*body: Stack(
           alignment: Alignment.center,
           children: [
             Container(
@@ -49,6 +52,26 @@ class MyApp extends StatelessWidget {
               color: Colors.amberAccent,
             )
           ],
+        ),*/
+
+        body: GestureDetector(
+          /*one way
+          onTap: () {
+            print('Tapped');
+          },
+          */
+          //another way
+          onTap: tapped,
+//up here is just another way to call the function
+
+          child: Center(
+            child: Container(
+              height: 300,
+              width: 300,
+              color: Colors.amber,
+              child: Center(child: Text('Tap Here!')),
+            ),
+          ),
         ),
       ),
     );
