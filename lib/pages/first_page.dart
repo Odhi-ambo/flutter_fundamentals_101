@@ -13,7 +13,26 @@ class FirstPage extends StatelessWidget {
       drawer: Drawer(
         backgroundColor: Colors.brown[400],
         child: Column(
-          children: [DrawerHeader(child: Icon(Icons.favorite))],
+          children: [
+            DrawerHeader(
+              child: Icon(
+                Icons.favorite,
+                size: 48,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Account'),
+            ),
+          ],
         ),
       ),
     );
