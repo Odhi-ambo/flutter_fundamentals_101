@@ -31,6 +31,7 @@ class FirstPage extends StatelessWidget {
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
+                Navigator.pop(context);
                 //go to homepage
                 Navigator.pushNamed(context, '/homepage');
               },
