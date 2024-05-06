@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_for_beginners/pages/first_page.dart';
+import 'package:flutter_for_beginners/pages/second_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FirstPage(),
+      routes: {'/secondpage': (context) => SecondPage()},
 
       // home: Scaffold(
       /*body: ListView(
