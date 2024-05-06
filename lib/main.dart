@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_beginners/pages/accounts_page.dart';
 import 'package:flutter_for_beginners/pages/first_page.dart';
-import 'package:flutter_for_beginners/pages/second_page.dart';
+import 'package:flutter_for_beginners/pages/home_page.dart';
+import 'package:flutter_for_beginners/pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,12 +17,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: FirstPage(),
-      routes: {'/secondpage': (context) => SecondPage()},
+        debugShowCheckedModeBanner: false,
+        home: FirstPage(),
+        routes: {
+          '/firstpage': (context) => FirstPage(),
+          '/homepage': (context) => HomePage(),
+          '/settingspage': (context) => SettingsPage(),
+          '/accountspage': (context) => AccountsPage()
+        }
 
-      // home: Scaffold(
-      /*body: ListView(
+        // home: Scaffold(
+        /*body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
@@ -38,7 +45,7 @@ class MyApp extends StatelessWidget {
           ],
         ),*/
 
-      /*body: Stack(
+        /*body: Stack(
           alignment: Alignment.center,
           children: [
             Container(
@@ -59,7 +66,7 @@ class MyApp extends StatelessWidget {
           ],
         ),*/
 
-      /*  body: GestureDetector(
+        /*  body: GestureDetector(
           /*one way
           onTap: () {
             print('Tapped');
@@ -80,6 +87,6 @@ class MyApp extends StatelessWidget {
         ),
 
       ),*/
-    );
+        );
   }
 }
